@@ -1,7 +1,7 @@
 global _start
 
         segment .data
-a       dq      0xFFFFFFFFFFFFFFFF
+a       dq      0xFF7F7F7F7F7F7F7F
 
         segment .text
 ;rdi
@@ -15,6 +15,14 @@ bytexors:
     ror rdx, 16
     xor al, dl
     xor al, dh      
+
+    ror rdx, 16
+    xor al, dl
+    xor al, dh
+
+    ror rdx, 16
+    xor al, dl
+    xor al, dh
 
     ret
 
